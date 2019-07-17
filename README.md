@@ -9,7 +9,7 @@ The proportion of the categorical feature ‘y’, which is the result set of th
 ## Continuous Features
 The continuous features of the dataset are age, balance, day, duration, campaign, pdays and previous. These features were separated from the main dataset to be analysed using the data quality report shown below. Boxplot graphs were also used to independently analyse the numerical data.
 
-![alt text](blob:https://pasteboard.co/d7a71834-e4d8-434e-be9d-f0e259e8d9ea)
+![Screenshot](dataexpl.png)
 
 The data quality report shows that balance, campaign, pdays and previous have outliers, indicated by their max values skewing widely from the mean, given the standard deviation of each. Duration also clearly shows that every value contained within is 0. For this reason, the duration feature was dropped from the dataset.
 The features balance, campaign, pdays and previous were all imputed to remove outliers. This was done by calculating the interquartile range (IQR) of each feature, and then removing any values that resided outside the range of 1st Quartile – (1.5*IQR) to 3rd Quartile + (1.5*IQR).
